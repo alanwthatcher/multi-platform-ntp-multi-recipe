@@ -9,7 +9,7 @@ when 'redhat'
   # Find Red Hat release version
   pv = node['platform_version'].split('.')[0]
 
-  # Call provider recipe based on platform version
+  # Call implementation recipe based on platform version
   include_recipe 'multi-platform-ntp-multi-recipe::redhat_ntpd' if pv == '6'
   include_recipe 'multi-platform-ntp-multi-recipe::redhat_chrony' if pv == '7'
 
